@@ -1,5 +1,7 @@
-@(members : Set[Member])
-@list("list"){  @for(member <- members) {
+@import service.Member
+
+@(members : List[Member])
+@list("another"){  @for(member <- members) {
     <p>순서 : @member.mid</p>
     <p>아이디 : @member.userid</p>
     <p>비밀번호 : @member.password</p>

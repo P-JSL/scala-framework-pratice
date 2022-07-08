@@ -7,7 +7,13 @@ lazy val root = (project in file("."))
   .settings(
     name := """scala-framework-pratice""",
     libraryDependencies ++= Seq(
+      jdbc,
+      cacheApi,
+      ws,
       guice,
-      "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test
+      "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test,
+      "com.typesafe.play" %% "play-slick" % "5.0.2",
+      "org.playframework.anorm" %% "anorm" % "2.6.10"
+
     )
   )
