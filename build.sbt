@@ -13,7 +13,8 @@ lazy val root = (project in file("."))
       guice,
       "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test,
       "com.typesafe.play" %% "play-slick" % "5.0.2",
-      "org.playframework.anorm" %% "anorm" % "2.6.10"
-
+      "com.typesafe.play" %% "play-slick-evolutions" % "5.0.2" % Test,
+      "org.playframework.anorm" %% "anorm" % "2.6.10",
+      "mysql" % "mysql-connector-java" % "8.0.29"
     )
   )

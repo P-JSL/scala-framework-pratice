@@ -10,7 +10,7 @@ import javax.inject._
  * application's home page.
  */
 @Singleton
-class HomeController @Inject()(val controllerComponents: ControllerComponents,val ms: MemberService) extends BaseController {
+class HomeController @Inject()(val controllerComponents: ControllerComponents, val ms : MemberService) extends BaseController {
 
   /**
    * Create an Action to render an HTML page.
@@ -21,7 +21,6 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents,va
    */
 
   def index() = Action.apply(Ok(views.html.index("Hello World")))
-
 
   def list = Action{
     Ok(views.html.another(ms.getList))

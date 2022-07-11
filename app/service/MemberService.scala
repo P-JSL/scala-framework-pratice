@@ -29,3 +29,21 @@ class MemberService @Inject() (dbapi : DBApi){
   }
 }
 case class Member(mid: Int, userid : String, password : String, nickname : String, email: String, regdate:Option[Date])
+/*
+
+class ScalaJdbcConnection @Inject() (db: Database, databaseExecutionContext: DatabaseExecutionContext) {
+  def updateSomething(): Unit = {
+    Future {
+      // get jdbc connection
+      val connection = db.getConnection()
+
+      // do whatever you need with the db connection
+
+      // remember to close the connection
+      connection.close()
+    }(databaseExecutionContext)
+  }
+}
+
+@Singleton
+class DatabaseExecutionContext @Inject()(system: ActorSystem) extends CustomExecutionContext(system, "database.default")*/
